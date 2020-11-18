@@ -8,8 +8,10 @@ const el = document.querySelector("#question");
 const render = (question) => {
     el.innerHTML += comp.questionComponent(question)
     question.answer_values.forEach(answer => {
-        const slicedAnswer = answer.slice(13, 15)
-        el.innerHTML += comp.answer(slicedAnswer)
+        const slicedAnswer = answer.slice(13, 15);
+        const splitAnswer = answer.split(" ");
+        console.log(splitAnswer[2])
+        el.innerHTML += comp.answer(splitAnswer)
     })
 }
 

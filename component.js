@@ -10,7 +10,7 @@ const questionComponent = question => {
 
 const answer = answer => {
     return `
-    <p>${answer}</p>
+    <p>${answer[2]}. ${answer[0]} ${answer[1]}</p>
     `
 }
 
