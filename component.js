@@ -8,11 +8,10 @@ const questionComponent = question => {
 }
 
 
-const answers = questArray => {
-    for (let i = 0; i < questArray.length; i++) {
-        return `
-        
-        `
-    }
+const answer = answer => {
+    return `
+    <p>${answer}</p>
+    `
 }
-export default { questionComponent };
+
+export default { questionComponent, answer };

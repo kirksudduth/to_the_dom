@@ -4,12 +4,16 @@ import comp from "./component.js"
 const el = document.querySelector("#question");
 const render = (question) => {
     el.innerHTML += comp.questionComponent(question)
+    question.answer_values.forEach(answer => {
+        el.innerHTML += comp.answer(answer)
+    })
 }
+
 
 const question = () => {
     
-    const a = q.getQuestion().then(render);
-    a;
+    const renderIt = q.getQuestion().then(render);
+    renderIt;
 }
 
 question()
